@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Service Status Hub</title>
+  <title>Service & ISP Status Hub</title>
   <style>
     :root {
       --bg-color: #0d1117;
@@ -12,7 +12,6 @@
       --text-main: #c9d1d9;
       --text-muted: #8b949e;
       --accent: #58a6ff;
-      --accent-hover: #1f6feb;
     }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -25,7 +24,7 @@
       align-items: center;
     }
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       width: 100%;
     }
     header {
@@ -40,6 +39,14 @@
     p.subtitle {
       color: var(--text-muted);
       margin-top: 0.5rem;
+    }
+    h2.section-title {
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px dashed var(--card-border);
+      padding-bottom: 0.4rem;
     }
     .grid {
       display: grid;
@@ -65,19 +72,25 @@
     }
     .card-title {
       font-weight: 600;
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+      margin-bottom: 0.3rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-    .card-footer {
+    .card-desc {
       font-size: 0.85rem;
       color: var(--text-muted);
-      margin-top: 1rem;
+      margin-bottom: 0.8srem;
+    }
+    .card-footer {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.8rem;
       display: flex;
       align-items: center;
       gap: 5px;
+      word-break: break-all;
     }
     .external-icon {
       font-size: 0.9rem;
@@ -89,67 +102,170 @@
 
   <div class="container">
     <header>
-      <h1>Status Hub</h1>
-      <p class="subtitle">Quick access directory to official provider status pages.</p>
+      <h1>Service & ISP Status Hub</h1>
+      <p class="subtitle">Centralized directory for major cloud providers and home internet service providers.</p>
     </header>
 
+    <!-- SECTION 1: CLOUD & TECH PLATFORMS -->
+    <h2 class="section-title">Cloud & Infrastructure Services</h2>
     <div class="grid">
-      <!-- Google Cloud -->
       <a class="card" href="https://status.cloud.google.com/" target="_blank">
         <div>
           <div class="card-title">Google Cloud <span class="external-icon">↗</span></div>
+          <div class="card-desc">Infrastructure & cloud services status.</div>
         </div>
         <div class="card-footer">status.cloud.google.com</div>
       </a>
 
-      <!-- Google Workspace -->
       <a class="card" href="https://www.google.com/appsstatus/dashboard/" target="_blank">
         <div>
           <div class="card-title">Google Workspace <span class="external-icon">↗</span></div>
+          <div class="card-desc">Gmail, Drive, Docs, and Calendar status.</div>
         </div>
         <div class="card-footer">google.com/appsstatus</div>
       </a>
 
-      <!-- Cloudflare -->
       <a class="card" href="https://www.cloudflarestatus.com/" target="_blank">
         <div>
           <div class="card-title">Cloudflare <span class="external-icon">↗</span></div>
+          <div class="card-desc">Edge network, CDN, and DNS status.</div>
         </div>
         <div class="card-footer">cloudflarestatus.com</div>
       </a>
 
-      <!-- Microsoft 365 -->
       <a class="card" href="https://status.office.com/" target="_blank">
         <div>
           <div class="card-title">Microsoft 365 <span class="external-icon">↗</span></div>
+          <div class="card-desc">Teams, Outlook, and Office apps status.</div>
         </div>
         <div class="card-footer">status.office.com</div>
       </a>
 
-      <!-- Microsoft Azure -->
       <a class="card" href="https://azure.status.microsoft.com/" target="_blank">
         <div>
           <div class="card-title">Microsoft Azure <span class="external-icon">↗</span></div>
+          <div class="card-desc">Azure cloud platform availability.</div>
         </div>
         <div class="card-footer">azure.status.microsoft.com</div>
       </a>
 
-      <!-- AWS -->
       <a class="card" href="https://health.aws.amazon.com/health/status" target="_blank">
         <div>
           <div class="card-title">AWS Health <span class="external-icon">↗</span></div>
+          <div class="card-desc">Amazon Web Services dashboard.</div>
         </div>
         <div class="card-footer">health.aws.amazon.com</div>
       </a>
 
-      <!-- GitHub -->
       <a class="card" href="https://www.githubstatus.com/" target="_blank">
         <div>
           <div class="card-title">GitHub <span class="external-icon">↗</span></div>
+          <div class="card-desc">Repositories, Actions, and API status.</div>
         </div>
         <div class="card-footer">githubstatus.com</div>
       </a>
     </div>
+
+    <!-- SECTION 2: INTERNET SERVICE PROVIDERS (ISPs) -->
+    <h2 class="section-title">Internet Service Providers (ISPs)</h2>
+    <div class="grid">
+      <a class="card" href="https://www.xfinity.com/support/status" target="_blank">
+        <div>
+          <div class="card-title">Comcast (Xfinity) <span class="external-icon">↗</span></div>
+          <div class="card-desc">Home internet & cable status center.</div>
+        </div>
+        <div class="card-footer">xfinity.com/support/status</div>
+      </a>
+
+      <a class="card" href="https://www.spectrum.net/support/internet" target="_blank">
+        <div>
+          <div class="card-title">Spectrum <span class="external-icon">↗</span></div>
+          <div class="card-desc">Charter Communications outage portal.</div>
+        </div>
+        <div class="card-footer">spectrum.net/support/internet</div>
+      </a>
+
+      <a class="card" href="https://www.att.com/outages/" target="_blank">
+        <div>
+          <div class="card-title">AT&T <span class="external-icon">↗</span></div>
+          <div class="card-desc">AT&T Fiber and wireless broadband outages.</div>
+        </div>
+        <div class="card-footer">att.com/outages</div>
+      </a>
+
+      <a class="card" href="https://www.verizon.com/support/check-network-status/" target="_blank">
+        <div>
+          <div class="card-title">Verizon <span class="external-icon">↗</span></div>
+          <div class="card-desc">Fios fiber-optic & home network status.</div>
+        </div>
+        <div class="card-footer">verizon.com/support/check-network-status</div>
+      </a>
+
+      <a class="card" href="https://www.t-mobile.com/coverage/network-outage" target="_blank">
+        <div>
+          <div class="card-title">T-Mobile <span class="external-icon">↗</span></div>
+          <div class="card-desc">5G Home Internet & mobile network coverage.</div>
+        </div>
+        <div class="card-footer">t-mobile.com/coverage</div>
+      </a>
+
+      <a class="card" href="https://fiber.google.com/outage/" target="_blank">
+        <div>
+          <div class="card-title">GFiber (Google Fiber) <span class="external-icon">↗</span></div>
+          <div class="card-desc">High-speed multi-gigabit fiber status.</div>
+        </div>
+        <div class="card-footer">fiber.google.com/outage</div>
+      </a>
+
+      <a class="card" href="https://frontier.com/helpcenter/categories/outages" target="_blank">
+        <div>
+          <div class="card-title">Frontier Communications <span class="external-icon">↗</span></div>
+          <div class="card-desc">Fiber-optic and broadband support.</div>
+        </div>
+        <div class="card-footer">frontier.com</div>
+      </a>
+
+      <a class="card" href="https://www.centurylink.com/home/help/fiber-internet/fiber-support/outages.html" target="_blank">
+        <div>
+          <div class="card-title">CenturyLink (Lumen) <span class="external-icon">↗</span></div>
+          <div class="card-desc">DSL and fiber network tracking.</div>
+        </div>
+        <div class="card-footer">centurylink.com</div>
+      </a>
+
+      <a class="card" href="https://www.optimum.net/pages/outage.html" target="_blank">
+        <div>
+          <div class="card-title">Optimum Communications <span class="external-icon">↗</span></div>
+          <div class="card-desc">Cable and fiber regional tracking map.</div>
+        </div>
+        <div class="card-footer">optimum.net/pages/outage.html</div>
+      </a>
+
+      <a class="card" href="https://help.earthlink.net/" target="_blank">
+        <div>
+          <div class="card-title">EarthLink <span class="external-icon">↗</span></div>
+          <div class="card-desc">Fiber, DSL, and wireless support portal.</div>
+        </div>
+        <div class="card-footer">help.earthlink.net</div>
+      </a>
+
+      <a class="card" href="https://ziplyfiber.com/" target="_blank">
+        <div>
+          <div class="card-title">Ziply Fiber <span class="external-icon">↗</span></div>
+          <div class="card-desc">Pacific Northwest regional fiber service.</div>
+        </div>
+        <div class="card-footer">ziplyfiber.com</div>
+      </a>
+
+      <a class="card" href="https://www.astound.com/" target="_blank">
+        <div>
+          <div class="card-title">Astound Broadband <span class="external-icon">↗</span></div>
+          <div class="card-desc">Cable and fiber multi-state support.</div>
+        </div>
+        <div class="card-footer">astound.com</div>
+      </a>
+    </div>
+
   </div>
 
 </body>
